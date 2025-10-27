@@ -1,0 +1,29 @@
+:root {
+--bg: #f8fafc;
+--text: #0f172a;
+--accent: #38bdf8;
+--done: #f0fdf4;
+--notdone: #fff7f7;
+--muted: #64748b;
+--border: #e6eef3;
+}
+
+
+*{box-sizing:border-box}
+body{font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);margin:0;padding:1rem 2rem}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.header-actions{display:flex;align-items:center;gap:12px}
+.counter{font-weight:700;color:var(--muted)}
+button{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:white;cursor:pointer}
+.filters{display:flex;gap:1rem;margin-bottom:12px;align-items:center}
+#taskTable{width:100%;border-collapse:collapse;background:white;border-radius:8px;overflow:hidden}
+#taskTable th{background:#f1fbff;color:var(--muted);text-align:left;padding:12px;border-bottom:1px solid var(--border)}
+#taskTable td{padding:12px;border-bottom:1px solid var(--border);vertical-align:middle}
+#taskTable tbody tr.done{background:var(--done)}
+#taskTable tbody tr.notdone{background:var(--notdone)}
+#taskTable td .small{color:var(--muted);font-size:13px}
+#taskTable td button{background:none;border:none;color:var(--accent);cursor:pointer;margin-right:8px}
+.error{color:#ef4444;font-size:13px;margin-top:6px}
+dialog{border:1px solid var(--border);border-radius:10px;padding:1rem;background:white}
+.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+input,textarea,select{padding:8px;border-radius:8px;border:1px solid var(--border);width:100%}
