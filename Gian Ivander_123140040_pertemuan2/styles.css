@@ -1,0 +1,89 @@
+:root{
+	/* Ivory (putih gading) background palette with blue accents */
+	--bg-0: #fbf9f6; /* ivory light */
+	--bg-1: #f6f2ec; /* ivory slightly warmer */
+	--card: #ffffff; /* white cards */
+	--text: #0f172a; /* dark text for contrast */
+	--muted: #6b7280; /* gray-muted for metadata */
+	--accent: #2563eb; /* blue accent (primary) */
+	--accent-2: #60a5fa; /* lighter blue accent */
+}
+
+*{box-sizing:border-box}
+body{
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	margin:0;
+	background: linear-gradient(180deg,var(--bg-0) 0%, var(--bg-1) 100%);
+	color: var(--text);
+	padding:24px;
+}
+
+.wrap{
+	max-width:1100px;
+	margin:0 auto;
+	display:grid;
+	grid-template-columns: 1fr 360px;
+	gap:22px;
+}
+
+header{grid-column:1 / -1;display:flex;align-items:center;justify-content:space-between;gap:12px}
+h1{font-size:20px;margin:0}
+
+.card{
+	background: var(--card);
+	padding:16px;
+	border-radius:12px;
+	box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+	border: 1px solid rgba(15,23,42,0.06);
+}
+
+.board{display:flex;flex-direction:column;gap:12px}
+.controls{display:flex;gap:10px}
+
+.controls button,
+button{
+	background: linear-gradient(180deg,var(--accent) 0%, var(--accent-2) 100%);
+	border: none;
+	color: white;
+	padding:8px 12px;
+	border-radius:10px;
+	cursor:pointer;
+	font-weight:600;
+	transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+	box-shadow: 0 6px 18px rgba(37,99,235,0.12);
+}
+.controls button:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37,99,235,0.14); }
+
+input,textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+
+.list{display:flex;flex-direction:column;gap:10px}
+.item{
+	display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+	transition: transform .12s ease, background .12s ease;
+}
+.item:hover{ transform: translateY(-4px); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+
+.item .meta{font-size:13px;color:var(--muted);margin-left:8px}
+.small{font-size:13px;color:var(--muted)}
+.right-column{display:flex;flex-direction:column;gap:12px}
+.clock{font-weight:700;font-size:28px}
+.tag{font-size:11px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);font-weight:600}
+.empty{color:var(--muted);text-align:center;padding:22px}
+footer{grid-column:1 / -1;text-align:center;color:var(--muted);margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.pane{padding:12px}
+.topbar{display:flex;justify-content:space-between;align-items:center}
+.clockWrap{display:flex;justify-content:space-between;align-items:center}
+.quickForm{margin-top:8px;display:grid;gap:8px}
+.row{display:flex;gap:8px}
+
+/* Item actions: show on hover for cleaner UI */
+.item .actions{opacity:0;transform:translateX(6px);transition:opacity .12s ease, transform .12s ease}
+.item:hover .actions{opacity:1;transform:none}
+.actions button{background:transparent;border:none;color:#cfe6ff;padding:6px;border-radius:6px;cursor:pointer}
+.actions button:hover{color:white}
+
+@media(max-width:900px){
+	.wrap{grid-template-columns:1fr;padding:16px}
+	.right-column{order:-1}
+}

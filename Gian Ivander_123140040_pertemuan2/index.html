@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Personal Dashboard</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+	<div>
+		<h1>Personal Dashboard</h1>
+	</div>
+</header>
+
+
+<main>
+<section class="card board" id="mainBoard">
+<div class="topbar">
+<div>
+<strong>Tasks & Notes</strong>
+<div class="meta">Tambah, edit, hapus — data tersimpan di localStorage</div>
+</div>
+<div class="controls">
+<button id="addTaskBtn">+ Task</button>
+<button id="addNoteBtn">+ Note</button>
+<button id="clearAllBtn">Clear All</button>
+</div>
+</div>
+
+
+<div class="grid-2">
+<div class="card pane">
+<strong>Daftar Tugas</strong>
+<div id="tasks" class="list" style="margin-top:10px;min-height:120px"></div>
+</div>
+
+
+<div class="card pane">
+<strong>Catatan</strong>
+<div id="notes" class="list" style="margin-top:10px;min-height:120px"></div>
+</div>
+</div>
+
+
+<div style="margin-top:12px" class="card">
+<strong>Jadwal Kuliah (contoh)</strong>
+<div id="schedule" style="margin-top:8px"></div>
+</div>
+
+
+</section>
+</main>
+
+
+<aside class="right-column">
+<div class="card">
+<div class="clockWrap">
+<div>
+<div class="clock" id="time">--:--</div>
+<div class="small" id="date">-</div>
+</div>
+<div class="tag" id="tz">WIB</div>
+</div>
+</div>
+
+
+<div class="card">
+<strong>Quick Add</strong>
+<div class="quickForm">
+<input id="quickTitle" placeholder="Judul..." />
+<select id="quickType"><option value="task">Task</option><option value="note">Note</option></select>
+<div class="row"><button id="quickAddBtn">Add</button><button id="importSample">Import Sample</button></div>
+</div>
+</div>
+
+
+<div class="card small">
+<strong>Petunjuk</strong>
+<ul>
+<li>Gunakan tombol + untuk menambah</li>
+<li>Klik edit untuk mengubah, delete untuk menghapus</li>
+<li>Data tersimpan otomatis di localStorage</li>
+</ul>
+</div>
+
+
+</aside>
+
+
+</div>
+
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
