@@ -27,4 +27,9 @@ Berikut tampilan dari aplikasi:
 <img width="1918" height="1021" alt="Screenshot 2025-10-29 194413" src="https://github.com/user-attachments/assets/0f5b8b27-d9ca-414b-a2f2-01ec4e166ec5" />
 
 ## Daftar Fitur ES6+
-1. **let** dan **const**, digunakan untuk mendeklarasikan variabel dengan block scope 
+1. **let** dan **const**, digunakan untuk mendeklarasikan variabel dengan block scope.
+2. **Arrow Function**, fungsi singkat untuk event handler dan helper DOM.
+3. **Template Literals**, interpolasi string & HTML dinamis tanpa concatenation.
+4. **Async/Await**, menangani operasi asinkron dengan gaya sinkron.
+5. **Classes**, struktur OOP modern untuk manajemen data.
+6. **Modules (import/export)**, pemisahan file modular agar mudah dibaca & dipelihara.
