@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Tugas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div>
+<h1>🎓 Timeline Tugas</h1>
+<div class="sub">Kerjain tugas lo, sebelum lo ketiduran!</div>
+</div>
+<div class="header-actions">
+<div class="counter">Tersisa: <span id="leftCount">0</span></div>
+<button id="addTaskBtn">+ Tambah Tugas</button>
+</div>
+</header>
+
+
+<section class="filters">
+<select id="filterStatus" title="Filter status">
+<option value="all">Semua Status</option>
+<option value="done">Selesai</option>
+<option value="notdone">Belum Selesai</option>
+</select>
+
+
+<select id="filterCourse" title="Filter mata kuliah">
+<option value="all">Semua Mata Kuliah</option>
+</select>
+
+
+<input type="text" id="searchTask" placeholder="Cari tugas atau mata kuliah..." />
+</section>
+
+
+<table id="taskTable" aria-live="polite">
+<thead>
+<tr>
+<th>Status</th>
+<th>Nama Tugas</th>
+<th>Mata Kuliah</th>
+<th>Deadline</th>
+<th>Catatan</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+
+<!-- Modal Tambah/Edit -->
+<dialog id="taskModal">
+<form id="taskForm">
+<h2 id="modalTitle">Tambah Tugas</h2>
+<label for="taskName">Nama Tugas</label>
+<input type="text" id="taskName" />
+<div id="errName" class="error" hidden>Nama tugas wajib diisi.</div>
+
+
+<label for="taskCourse">Mata Kuliah</label>
+<input type="text" id="taskCourse" />
+<div id="errCourse" class="error" hidden>Mata kuliah wajib diisi.</div>
+
+
+<label for="taskDeadline">Deadline</label>
+<input type="date" id="taskDeadline" />
+<div id="errDeadline" class="error" hidden>Deadline harus tanggal yang valid.</div>
+
+
+<label for="taskNote">Catatan (opsional)</label>
+<textarea id="taskNote" rows="3"></textarea>
+
+
+<div class="modal-actions">
+<button type="submit">Simpan</button>
+<button type="button" id="cancelBtn">Batal</button>
+</div>
+</form>
+</dialog>
+
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
