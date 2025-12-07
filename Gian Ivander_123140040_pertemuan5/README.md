@@ -25,5 +25,4 @@ python library_system.py
 ```
 
 ## Screenshot Hasil Running Program
-(<img width="926" height="511" alt="Screenshot 2025-12-07 233835" src="https://github.com/user-attachments/assets/c5728a0d-a0d7-466c-89d7-85d5b4b6da57" />
-)
+<img width="926" height="511" alt="Screenshot 2025-12-07 233835" src="https://github.com/user-attachments/assets/c5728a0d-a0d7-466c-89d7-85d5b4b6da57" />
